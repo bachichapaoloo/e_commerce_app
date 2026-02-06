@@ -1,13 +1,18 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext, useState, useEffect } from "react";
 
-const CartContext = createContext();
+const CartContext = createContext(null);
 
 export function CartProvider({ children }) {
 
     const [cart, setCart] = useState(() => {
-        const stored = localStorage.getItem("cart");
-        return stored ? JSON.parse(stored) : []
+        try {
+            const stored = localStorage.getItem("cart");
+            return stored ? JSON.parse(stored) : [];
+        } catch {
+            return [];
+        }
     });
+
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -51,7 +56,7 @@ export function CartProvider({ children }) {
         // keep digits, minus and dot. remove commas.
         let s = String(price).trim();
         // remove all characters except digits, dot, minus
-        s = s.replace(/[^0-9.\-]/g, "");
+        s = s.replace(/[^0-9.-]/g, "");
         // if multiple dots, keep first dot only
         const parts = s.split(".");
         if (parts.length > 2) {
@@ -84,4 +89,10 @@ export function CartProvider({ children }) {
     )
 }
 
-export const useCart = () => useContext(CartContext);
+export const useCart = () => {
+    const ctx = useContext(CartContext);
+    if (!ctx) {
+        throw new Error("useCart must be used within a CartProvider");
+    }
+    return ctx;
+};
