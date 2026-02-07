@@ -8,7 +8,7 @@ export const bannerHomeStyles = {
   contentContainer: "container mx-auto px-4 py-24 z-10 pt-40 relative flex flex-col items-center text-center",
 
   // Minimalistic Layout Styles (New)
-  minimalContainer: "relative overflow-x-hidden min-h-[60vh] flex flex-col justify-center bg-white",
+  minimalContainer: "relative overflow-x-hidden min-h-[60vh] flex flex-col justify-center bg-gray-100",
   minimalNavbarWrapper: "absolute top-0 left-0 w-full z-20",
   minimalContentContainer: "container mx-auto px-6 md:px-12 z-10 relative flex flex-col items-start text-left pt-20",
 
@@ -756,7 +756,7 @@ export const categorySectionStyles = {
 };
 
 export const featuredSectionStyles = {
-  section: "py-16 bg-gray-50",
+  section: "py-16 bg-white",
   container: "container mx-auto px-6 md:px-12",
   header: "flex justify-between items-end mb-8",
   title: "text-2xl font-bold text-gray-900 font-sans tracking-tight",
@@ -806,4 +806,70 @@ export const minimalNavbarStyles = {
   mobileNavList: "flex flex-col gap-4",
   mobileNavItem: "text-lg font-medium text-gray-600 hover:text-gray-900 py-2 border-b border-gray-50",
   mobileAccountSection: "mt-8 pt-8 border-t border-gray-100 flex flex-col gap-4"
+};
+
+export const minimalFooterStyles = {
+  section: "py-16 bg-white border-t border-gray-100",
+  container: "container mx-auto px-6 md:px-12",
+  grid: "grid grid-cols-1 md:grid-cols-4 gap-12",
+
+  // Columns
+  brandCol: "col-span-1 md:col-span-1 space-y-4",
+  brandTitle: "text-2xl font-bold font-sans tracking-tight",
+  brandText: "text-gray-500 text-sm leading-relaxed",
+
+  // Links
+  columnHeading: "font-semibold text-gray-900 mb-4",
+  linkList: "flex flex-col gap-3",
+  link: "text-gray-500 hover:text-gray-900 text-sm transition-colors w-fit",
+
+  // Newsletter
+  newsletterText: "text-gray-500 text-sm mb-4",
+  inputContainer: "flex gap-2",
+  input: "bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 w-full text-sm focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 transition-all",
+  button: "bg-black text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors",
+
+  // Bottom
+  bottomBar: "mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4",
+  copyright: "text-gray-400 text-xs",
+  socialFlex: "flex gap-4",
+  socialIcon: "text-gray-400 hover:text-black transition-colors"
+};
+
+export const shopPageStyles = {
+  container: "container mx-auto px-6 md:px-12 py-12",
+  title: "text-3xl font-bold font-sans text-gray-900 mb-8",
+
+  // Layout
+  layout: "flex flex-col md:flex-row gap-8 items-start",
+
+  // Sidebar
+  sidebar: "w-full md:w-64 flex-shrink-0 space-y-8",
+  filterGroup: "space-y-3",
+  filterTitle: "font-semibold text-gray-900 mb-2",
+  categoryList: "space-y-2",
+  categoryItem: "block text-gray-600 hover:text-black cursor-pointer transition-colors text-sm",
+  categoryItemActive: "font-bold text-black",
+
+  // Main Content
+  mainContent: "flex-1 w-full",
+
+  // Toolbar
+  toolbar: "flex flex-col sm:flex-row justify-between items-center mb-6 gap-4",
+  searchContainer: "relative w-full sm:max-w-md",
+  searchIcon: "absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-4 w-4",
+  searchInput: "w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-black",
+  sortSelect: "border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none cursor-pointer bg-white",
+
+  // Grid
+  grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
+
+  // Product Card
+  card: "group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow",
+  imageContainer: "aspect-square bg-gray-50 overflow-hidden relative",
+  productImage: "w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300",
+  cardContent: "p-4",
+  productName: "font-semibold text-gray-900 mb-1 font-sans",
+  productPrice: "text-gray-900 font-bold text-sm",
+  productCategory: "text-xs text-gray-500 mb-2 uppercase tracking-wide"
 };

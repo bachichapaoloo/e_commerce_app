@@ -1,15 +1,10 @@
 import React from 'react';
 import { bannerHomeStyles } from '../assets/dummyStyles';
-import Navbar from './Navbar';
 import { ArrowRight } from 'lucide-react';
 
 export const BannerHome = () => {
     return (
         <div className={bannerHomeStyles.minimalContainer}>
-            <div className={bannerHomeStyles.minimalNavbarWrapper}>
-                <Navbar />
-            </div>
-
             <div className={bannerHomeStyles.minimalContentContainer}>
                 <h1 className={bannerHomeStyles.minimalH1Text}>
                     Discover Quality & <br />
