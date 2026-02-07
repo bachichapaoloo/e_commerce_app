@@ -10,7 +10,7 @@ export const bannerHomeStyles = {
   // Minimalistic Layout Styles (New)
   minimalContainer: "relative overflow-x-hidden min-h-[60vh] flex flex-col justify-center bg-gray-100",
   minimalNavbarWrapper: "absolute top-0 left-0 w-full z-20",
-  minimalContentContainer: "container mx-auto px-6 md:px-12 z-10 relative flex flex-col items-start text-left pt-20",
+  minimalContentContainer: "container mx-auto px-6 md:px-12 z-10 relative flex flex-col items-start text-left",
 
   // Typography (Original)
   h1Container: "mb-12 md:mb-16",
@@ -872,4 +872,35 @@ export const shopPageStyles = {
   productName: "font-semibold text-gray-900 mb-1 font-sans",
   productPrice: "text-gray-900 font-bold text-sm",
   productCategory: "text-xs text-gray-500 mb-2 uppercase tracking-wide"
+};
+
+export const aboutPageStyles = {
+  container: "container mx-auto px-6 md:px-12 py-16",
+
+  // Header
+  headerSection: "text-center max-w-3xl mx-auto mb-20",
+  title: "text-4xl md:text-5xl font-bold font-sans text-gray-900 mb-6 tracking-tight",
+  subtitle: "text-lg text-gray-500 leading-relaxed",
+
+  // Content Section (Mission)
+  section: "mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
+  imageContainer: "aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden",
+  image: "w-full h-full object-cover",
+  contentBlock: "space-y-6",
+  sectionTitle: "text-3xl font-bold font-sans text-gray-900",
+  paragraph: "text-gray-600 leading-relaxed",
+
+  // Stats
+  statsGrid: "grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 bg-gray-50 rounded-2xl p-12",
+  statItem: "text-center",
+  statValue: "text-4xl font-bold text-gray-900 mb-2 font-sans",
+  statLabel: "text-sm text-gray-500 uppercase tracking-wide",
+
+  // Team
+  teamGrid: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8",
+  teamCard: "group",
+  teamImageContainer: "aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mb-4 relative",
+  teamImage: "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105",
+  teamName: "text-lg font-bold text-gray-900",
+  teamRole: "text-gray-500 text-sm"
 };

@@ -186,3 +186,31 @@ export const PRODUCTS = [
     image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800",
   }
 ];
+
+export const STATS = [
+  { value: "10+", label: "Years of Excellence" },
+  { value: "25k+", label: "Happy Customers" },
+  { value: "15+", label: "Awards Won" },
+  { value: "100%", label: "Quality Guarantee" },
+];
+
+export const TEAM_MEMBERS = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "Founder & CEO",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Head of Design",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 3,
+    name: "Emily Davis",
+    role: "Product Manager",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
+  },
+];
