@@ -3,6 +3,8 @@ import { useCart } from '../context/CartContext';
 import { checkoutPageStyles } from '../assets/dummyStyles';
 import { useNavigate } from 'react-router-dom';
 
+import Swal from 'sweetalert2';
+
 const Checkout = () => {
     const { cart, totalPrice, clearCart } = useCart();
     const navigate = useNavigate();
@@ -27,9 +29,44 @@ const Checkout = () => {
         }
 
         // Simulate order process
-        alert('Thank you! Your order has been placed successfully.');
-        clearCart();
-        navigate('/');
+        Swal.fire({
+            title: 'Processing Payment',
+            text: 'Please wait...',
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            background: '#ffffff',
+            color: '#000000',
+            customClass: {
+                popup: 'rounded-2xl border border-gray-100 shadow-xl',
+                title: 'font-sans font-bold text-xl',
+                htmlContainer: 'font-sans text-gray-500'
+            },
+            willOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        setTimeout(() => {
+            Swal.fire({
+                title: 'Order Placed!',
+                text: `Thank you, ${firstName}. Your order has been confirmed.`,
+                icon: 'success',
+                iconColor: '#000000',
+                background: '#ffffff',
+                color: '#000000',
+                confirmButtonColor: '#000000',
+                confirmButtonText: 'Return Home',
+                customClass: {
+                    popup: 'rounded-3xl border border-gray-100 shadow-2xl',
+                    title: 'font-sans font-bold text-2xl text-gray-900',
+                    htmlContainer: 'font-sans text-gray-500 text-base',
+                    confirmButton: 'rounded-full px-10 py-4 font-bold uppercase tracking-wide text-sm transition-transform hover:scale-105'
+                }
+            }).then(() => {
+                clearCart();
+                navigate('/');
+            });
+        }, 2000);
     };
 
     if (cart.length === 0) {

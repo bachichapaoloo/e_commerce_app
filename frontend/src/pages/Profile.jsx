@@ -6,6 +6,7 @@ import {
     User, Package, MapPin, ShoppingBag, LogOut,
     CreditCard, ChevronRight, CheckCircle, Truck, Clock
 } from 'lucide-react';
+import { toast } from 'sonner';
 
 const Profile = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
@@ -180,6 +181,7 @@ const Profile = () => {
                             <MapPin size={18} /> Addresses
                         </button>
                         <button
+                            onClick={() => toast.success('Logged out successfully')}
                             className={`${profilePageStyles.navItem} ${profilePageStyles.navItemInactive} w-full text-red-500 hover:bg-red-50 hover:text-red-600 mt-4`}
                         >
                             <LogOut size={18} /> Logout

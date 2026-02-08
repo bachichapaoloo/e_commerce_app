@@ -2,6 +2,7 @@ import React from 'react';
 import { minimalFooterStyles } from "../../assets/dummyStyles";
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { toast } from 'sonner';
 
 const FooterSection = () => {
     return (
@@ -50,11 +51,16 @@ const FooterSection = () => {
                         <p className={minimalFooterStyles.newsletterText}>
                             Subscribe to our newsletter for exclusive offers and updates.
                         </p>
-                        <form className={minimalFooterStyles.inputContainer} onSubmit={(e) => e.preventDefault()}>
+                        <form className={minimalFooterStyles.inputContainer} onSubmit={(e) => {
+                            e.preventDefault();
+                            toast.success("Subscribed to newsletter!");
+                            e.target.reset();
+                        }}>
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 className={minimalFooterStyles.input}
+                                required
                             />
                             <button type="submit" className={minimalFooterStyles.button}>
                                 Join

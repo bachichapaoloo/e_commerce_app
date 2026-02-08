@@ -205,70 +205,7 @@ export const comingSoonStyles = {
 
 // Add to existing src/assets/dummyStyles.js
 
-const contactPageStyles = {
-  // Page layout
-  pageContainer: "min-h-screen bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12",
-  innerContainer: "max-w-7xl mx-auto",
 
-  // Header section
-  pageHeader: "text-center mb-8 sm:mb-10 md:mb-10",
-  pageTitle: "text-3xl sm:text-4xl md:text-5xl font-medium",
-  pageSubtitle: "mt-2 text-gray-500 max-w-2xl mx-auto text-sm sm:text-base",
-
-  // Main grid
-  mainGrid: "grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8 items-start",
-
-  // Left column - Form
-  leftColumn: "lg:col-span-7 order-1 lg:order-1",
-  formCard: "bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 sm:p-8 md:p-8 lg:p-8",
-  form: "space-y-5",
-  inputGrid: "grid grid-cols-1 sm:grid-cols-2 gap-4",
-
-  // Input styles
-  inputLabel: "text-sm text-gray-600",
-  requiredStar: "text-red-500",
-  inputContainer: "mt-2 relative",
-  inputIconContainer: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none",
-  inputBase: "w-full rounded-xl border px-4 py-3 pl-12 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 transition",
-  inputNormal: "border-gray-200",
-  inputError: "border-rose-400",
-  errorMessage: "text-rose-500 text-xs mt-1 flex items-center gap-2",
-
-  // Textarea
-  textareaContainer: "mt-2 w-full rounded-xl border px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 transition",
-
-  // Form buttons
-  buttonsContainer: "flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4",
-  submitButton: "inline-flex items-center gap-3 bg-gradient-to-r from-gray-300 to-gray-500 text-white px-5 sm:px-6 py-3 rounded-full shadow hover:scale-[1.02] cursor-pointer transition-transform disabled:opacity-60",
-  clearButton: "inline-flex items-center cursor-pointer gap-2 border border-gray-200 px-4 py-3 rounded-xl text-sm hover:bg-gray-50 transition-colors",
-
-  // Right column
-  rightColumn: "lg:col-span-5 order-2 lg:order-2",
-  rightColumnGrid: "grid grid-cols-1 gap-4 items-start",
-
-  // Creative card
-  creativeCardBase: "rounded-2xl p-4 border border-gray-100 bg-gradient-to-r shadow-lg",
-  creativeCardIconContainer: "p-3 rounded-lg bg-white/90 backdrop-blur",
-  creativeCardTitle: "font-semibold",
-  creativeCardSubtitle: "text-sm text-gray-600 mt-2",
-  creativeCardButtonBase: "inline-flex bg-gradient-to-br from-gray-300 to-gray-400 items-center gap-2 px-3 py-2 rounded-lg text-black text-sm font-medium shadow-sm",
-
-  // Toast
-  toastBase: "fixed left-1/2 -translate-x-1/2 bottom-8 z-50 px-4 py-2 rounded-full text-sm flex items-center gap-2 shadow-lg",
-  toastError: "bg-rose-500 text-white",
-  toastSuccess: "bg-black text-white",
-
-  // Accent backgrounds for creative cards
-  accentAmber: "from-gray-300 to-gray-400",
-  accentIndigo: "from-indigo-50 to-cyan-50",
-
-  // Button accent classes
-  buttonAmber: "bg-amber-50 text-amber-700",
-  buttonIndigo: "bg-indigo-600 text-white",
-};
-
-
-export { contactPageStyles };
 
 // Add these styles to your existing dummyStyles.js file
 
@@ -890,13 +827,54 @@ export const aboutPageStyles = {
   statValue: "text-4xl font-bold text-gray-900 mb-2 font-sans",
   statLabel: "text-sm text-gray-500 uppercase tracking-wide",
 
-  // Team
-  teamGrid: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8",
-  teamCard: "group",
-  teamImageContainer: "aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mb-4 relative",
-  teamImage: "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105",
-  teamName: "text-lg font-bold text-gray-900",
-  teamRole: "text-gray-500 text-sm"
+  // Values
+  valuesGrid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8",
+  valueCard: "bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-all duration-300 text-center group border border-transparent hover:border-gray-100",
+  valueIconWrapper: "w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-gray-900 group-hover:bg-black group-hover:text-white transition-colors duration-300",
+  valueTitle: "text-xl font-bold text-gray-900 mb-3 font-sans",
+  valueDescription: "text-gray-500 text-sm leading-relaxed",
+
+  // Newsletter (Join Community)
+  newsletterSection: "bg-gray-900 text-white rounded-3xl p-8 md:p-16 text-center mt-24 relative overflow-hidden shadow-2xl",
+  newsletterContent: "relative z-10 max-w-2xl mx-auto",
+  newsletterTitle: "text-3xl md:text-4xl font-bold mb-6 font-sans tracking-tight",
+  newsletterText: "text-gray-400 mb-10 text-lg leading-relaxed",
+  newsletterForm: "flex flex-col sm:flex-row gap-4 max-w-md mx-auto",
+  newsletterInput: "flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:bg-white/20 focus:border-white/30 transition-all backdrop-blur-sm",
+  newsletterButton: "bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform duration-200"
+};
+
+export const contactPageStyles = {
+  container: "container mx-auto px-6 md:px-12 py-20 flex items-center justify-center min-h-[80vh]",
+
+  // Split Panel Card
+  cardContainer: "bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row w-full max-w-5xl",
+
+  // Left Panel (Info)
+  infoPanel: "bg-black text-white p-10 md:p-12 md:w-5/12 flex flex-col justify-between space-y-12",
+  infoHeader: "",
+  title: "text-3xl md:text-4xl font-bold font-sans mb-4 tracking-tight leading-tight",
+  subtitle: "text-gray-400 text-sm leading-relaxed",
+
+  // Layout
+  infoList: "space-y-6",
+
+  infoItem: "flex gap-4 items-center group cursor-pointer",
+  iconBox: "w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300",
+  infoText: "text-sm text-gray-300 group-hover:text-white transition-colors",
+
+  socials: "flex gap-4",
+  socialIcon: "w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all hover:scale-110",
+
+  // Right Panel (Form)
+  formPanel: "bg-white p-10 md:p-12 md:w-7/12",
+  formTitle: "text-2xl font-bold text-gray-900 mb-8 font-sans",
+  form: "space-y-5",
+  inputGroup: "space-y-2",
+  label: "block text-xs font-bold text-gray-500 uppercase tracking-wider",
+  input: "w-full bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:bg-white focus:border-black focus:ring-1 focus:ring-black transition-all duration-300 placeholder-gray-400 font-medium",
+  textarea: "w-full bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:bg-white focus:border-black focus:ring-1 focus:ring-black transition-all duration-300 h-32 resize-none placeholder-gray-400 font-medium",
+  submitBtn: "bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-300 flex items-center gap-2 mt-4 text-sm uppercase tracking-wide w-fit"
 };
 
 export const serviceSectionStyles = {
@@ -1069,4 +1047,17 @@ export const profilePageStyles = {
   addressDetails: "text-gray-600 text-sm leading-relaxed mb-4",
   defaultBadge: "absolute top-4 right-4 bg-black text-white text-[10px] px-2 py-1 rounded",
   editBtn: "text-sm font-medium text-gray-500 group-hover:text-black decoration-underline underline-offset-4"
+};
+
+export const productCardStyles = {
+  card: "group relative bg-white rounded-xl overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100",
+  imageContainer: "aspect-[4/5] bg-gray-100 relative overflow-hidden",
+  image: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
+  overlay: "absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+  addButton: "absolute bottom-4 right-4 bg-white text-black p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-black hover:text-white flex items-center justify-center",
+  info: "p-4 space-y-1",
+  category: "text-xs font-bold text-gray-400 uppercase tracking-wider",
+  name: "font-semibold text-gray-900 leading-tight truncate",
+  price: "text-gray-900 font-medium",
+  discountPercentage: "absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wide"
 };

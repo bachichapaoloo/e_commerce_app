@@ -4,6 +4,7 @@ import ShopHero from '../components/sections/ShopHero'; // Import ShopHero
 import { Search, ChevronDown, Filter, Grid3x3, List } from 'lucide-react';
 import { PRODUCTS } from '../assets/dummywdata';
 import { Link } from 'react-router-dom';
+import ProductCard from '../components/common/ProductCard';
 
 const categories = ["All Products", "Electronics", "Fashion", "Home & Living"];
 
@@ -74,23 +75,10 @@ const Shop = () => {
                             </select>
                         </div>
 
-                        {/* Product Grid */}
+                        {/* Grid */}
                         <div className={shopPageStyles.grid}>
                             {filteredProducts.map(product => (
-                                <Link to={`/product/${product.id}`} key={product.id} className={shopPageStyles.card}>
-                                    <div className={shopPageStyles.imageContainer}>
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            className={shopPageStyles.productImage}
-                                        />
-                                    </div>
-                                    <div className={shopPageStyles.cardContent}>
-                                        <p className={shopPageStyles.productCategory}>{product.category}</p>
-                                        <h3 className={shopPageStyles.productName}>{product.name}</h3>
-                                        <p className={shopPageStyles.productPrice}>{product.price}</p>
-                                    </div>
-                                </Link>
+                                <ProductCard key={product.id} product={product} />
                             ))}
                         </div>
 

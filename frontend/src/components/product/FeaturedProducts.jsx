@@ -3,6 +3,7 @@ import { ArrowRight, Plus } from 'lucide-react';
 import { featuredSectionStyles } from '../../assets/dummyStyles';
 import { Link } from 'react-router-dom';
 import { PRODUCTS } from '../../assets/dummywdata';
+import ProductCard from '../common/ProductCard';
 
 const FeaturedProducts = () => {
     // Show only first 4 products
@@ -22,23 +23,7 @@ const FeaturedProducts = () => {
                 {/* Grid */}
                 <div className={featuredSectionStyles.grid}>
                     {products.map((product) => (
-                        <Link to={`/product/${product.id}`} key={product.id} className={featuredSectionStyles.card}>
-                            <div className={featuredSectionStyles.imageContainer}>
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className={featuredSectionStyles.image}
-                                />
-                                <button className={featuredSectionStyles.addButton}>
-                                    <Plus size={20} />
-                                </button>
-                            </div>
-
-                            <div className={featuredSectionStyles.info}>
-                                <h3 className={featuredSectionStyles.productName}>{product.name}</h3>
-                                <p className={featuredSectionStyles.price}>{product.price}</p>
-                            </div>
-                        </Link>
+                        <ProductCard key={product.id} product={product} />
                     ))}
                 </div>
             </div>

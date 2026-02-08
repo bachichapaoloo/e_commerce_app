@@ -251,25 +251,31 @@ export const STATS = [
   { value: "100%", label: "Quality Guarantee" },
 ];
 
-export const TEAM_MEMBERS = [
+export const OUR_VALUES = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
+    title: "Eco-Conscious",
+    description: "We believe in sustainable living. Our products are crafted with the planet in mind, using eco-friendly materials and ethical manufacturing processes.",
+    iconName: "Leaf"
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Head of Design",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+    title: "Quality First",
+    description: "We never compromise on quality. Every item in our collection is hand-selected and rigorously tested to ensure it meets our high standards.",
+    iconName: "ShieldCheck"
   },
   {
     id: 3,
-    name: "Emily Davis",
-    role: "Product Manager",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
+    title: "Modern Design",
+    description: "We celebrate the beauty of simplicity. Our curated selection features timeless, minimalist designs that elevate your everyday life.",
+    iconName: "Zap" // or Layout
   },
+  {
+    id: 4,
+    title: "Community Driven",
+    description: "We are more than a store. We are a community of like-minded individuals who value design, quality, and sustainability.",
+    iconName: "Users"
+  }
 ];
 
 export const SERVICE_HIGHLIGHTS = [

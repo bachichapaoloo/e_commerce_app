@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { toast } from 'sonner';
 
 const CartContext = createContext(null);
 
@@ -18,13 +19,18 @@ export function CartProvider({ children }) {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
 
+
+
     // to add items in cart
     const addItem = (item) => {
         setCart((prev) => {
             const existing = prev.find((p) => p.id === item.id);
             if (existing) {
+                toast.success(`Increased ${item.name} quantity`);
                 return prev.map((p) => p.id === item.id ? { ...p, qty: p.qty + 1 } : p);
-            } return [...prev, { ...item, qty: 1 }];
+            }
+            toast.success(`Added ${item.name} to cart`);
+            return [...prev, { ...item, qty: 1 }];
         })
     }
 
@@ -41,11 +47,13 @@ export function CartProvider({ children }) {
     // to remove item from cart
     const removeItem = (id) => {
         setCart((prev) => prev.filter((p) => p.id !== id));
+        toast.error('Item removed from cart');
     }
 
     // to clear cart
     const clearCart = () => {
         setCart([]);
+        toast.info('Cart cleared');
     }
 
     // helper: robust price parser

@@ -1,6 +1,11 @@
 import React from 'react';
 import { aboutPageStyles } from '../assets/dummyStyles';
-import { STATS, TEAM_MEMBERS } from '../assets/dummywdata';
+import { STATS, OUR_VALUES } from '../assets/dummywdata';
+import { Leaf, ShieldCheck, Zap, Users } from 'lucide-react';
+
+const iconMap = {
+    Leaf, ShieldCheck, Zap, Users
+};
 
 const About = () => {
     return (
@@ -46,25 +51,44 @@ const About = () => {
                 ))}
             </div>
 
-            {/* Team Section */}
-            <section>
+            {/* Values Section */}
+            <section className="mb-20">
                 <div className="text-center mb-12">
-                    <h2 className={aboutPageStyles.sectionTitle}>Meet the Team</h2>
+                    <h2 className={aboutPageStyles.sectionTitle}>Our Core Values</h2>
                 </div>
-                <div className={aboutPageStyles.teamGrid}>
-                    {TEAM_MEMBERS.map((member) => (
-                        <div key={member.id} className={aboutPageStyles.teamCard}>
-                            <div className={aboutPageStyles.teamImageContainer}>
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    className={aboutPageStyles.teamImage}
-                                />
+                <div className={aboutPageStyles.valuesGrid}>
+                    {OUR_VALUES.map((value) => {
+                        const Icon = iconMap[value.iconName];
+                        return (
+                            <div key={value.id} className={aboutPageStyles.valueCard}>
+                                <div className={aboutPageStyles.valueIconWrapper}>
+                                    {Icon && <Icon size={28} />}
+                                </div>
+                                <h3 className={aboutPageStyles.valueTitle}>{value.title}</h3>
+                                <p className={aboutPageStyles.valueDescription}>{value.description}</p>
                             </div>
-                            <h3 className={aboutPageStyles.teamName}>{member.name}</h3>
-                            <p className={aboutPageStyles.teamRole}>{member.role}</p>
-                        </div>
-                    ))}
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* Newsletter CTA */}
+            <section className={aboutPageStyles.newsletterSection}>
+                <div className={aboutPageStyles.newsletterContent}>
+                    <h2 className={aboutPageStyles.newsletterTitle}>Join Our Community</h2>
+                    <p className={aboutPageStyles.newsletterText}>
+                        Subscribe to receive updates, access to exclusive deals, and more.
+                    </p>
+                    <form className={aboutPageStyles.newsletterForm} onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className={aboutPageStyles.newsletterInput}
+                        />
+                        <button type="submit" className={aboutPageStyles.newsletterButton}>
+                            Subscribe
+                        </button>
+                    </form>
                 </div>
             </section>
         </div>
