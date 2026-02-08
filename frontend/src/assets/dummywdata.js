@@ -124,6 +124,14 @@ export const PRODUCTS = [
     category: "Electronics",
     price: "₱ 2,999",
     image: "https://images.pexels.com/photos/30009009/pexels-photo-30009009/free-photo-of-minimalist-wireless-earbuds-on-black-surface.jpeg",
+    description: "Experience crystal clear sound with our latest Wireless Bluetooth Earbuds. Featuring active noise cancellation, 24-hour battery life, and a comfortable ergonomic fit. Perfect for music lovers and professionals alike.",
+    rating: 4.8,
+    reviews: [
+      { user: "Alex M.", rating: 5, comment: "Best earbuds I've ever owned. The sound quality is incredible." },
+      { user: "Sarah L.", rating: 4, comment: "Great battery life, but the case is a bit bulky." }
+    ],
+    sizes: ["One Size"],
+    colors: ["#000000", "#FFFFFF"]
   },
   {
     id: 102,
@@ -131,6 +139,13 @@ export const PRODUCTS = [
     category: "Electronics",
     price: "₱5,499",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800",
+    description: "Stay connected and healthy with the Smart Watch Pro. Tracks your heart rate, sleep, and workouts. Comes with a sleek design and customizable watch faces.",
+    rating: 4.6,
+    reviews: [
+      { user: "John D.", rating: 5, comment: "Love the design and the fitness tracking features are spot on." }
+    ],
+    sizes: ["40mm", "44mm"],
+    colors: ["#000000", "#C0C0C0", "#FFD700"]
   },
   {
     id: 103,
@@ -138,6 +153,11 @@ export const PRODUCTS = [
     category: "Electronics",
     price: "₱ 12,999",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800",
+    description: "Immerse yourself in music with our premium Noise Cancelling Headphones. Superior sound quality, plush ear cushions, and up to 30 hours of playback time.",
+    rating: 4.9,
+    reviews: [],
+    sizes: ["One Size"],
+    colors: ["#000000", "#000080"]
   },
 
   // Fashion
@@ -147,6 +167,14 @@ export const PRODUCTS = [
     category: "Fashion",
     price: "₱ 899",
     image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800",
+    description: "A wardrobe staple. Made from 100% organic cotton, this classic tee offers breathable comfort and a perfect fit. Available in multiple versatile colors.",
+    rating: 4.5,
+    reviews: [
+      { user: "Mike T.", rating: 4, comment: "Good quality cotton. Fits true to size." },
+      { user: "Emily R.", rating: 5, comment: "Very soft and comfortable." }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["#FFFFFF", "#000000", "#808080"]
   },
   {
     id: 202,
@@ -154,6 +182,11 @@ export const PRODUCTS = [
     category: "Fashion",
     price: "₱ 4,500",
     image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800",
+    description: "Crafted from genuine leather, this crossbody bag combines style and functionality. Features adjustable straps and multiple compartments for your essentials.",
+    rating: 4.7,
+    reviews: [],
+    sizes: ["One Size"],
+    colors: ["#8B4513", "#000000"]
   },
   {
     id: 203,
@@ -161,6 +194,13 @@ export const PRODUCTS = [
     category: "Fashion",
     price: "₱ 3,299",
     image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&q=80&w=800",
+    description: "The perfect layer for any season. This durable denim jacket features a classic cut, button closure, and chest pockets. A timeless addition to your closet.",
+    rating: 4.8,
+    reviews: [
+      { user: "Chris P.", rating: 5, comment: "Excellent fit and quality denim." }
+    ],
+    sizes: ["M", "L", "XL"],
+    colors: ["#000080", "#87CEEB"]
   },
 
   // Home & Living
@@ -170,6 +210,11 @@ export const PRODUCTS = [
     category: "Home & Living",
     price: "₱ 1,299",
     image: "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&q=80&w=800",
+    description: "Add a touch of elegance to your home with this minimalist ceramic vase. Hand-crafted with a matte finish, it's perfect for fresh or dried flowers.",
+    rating: 4.9,
+    reviews: [],
+    sizes: ["Small", "Medium", "Large"],
+    colors: ["#FFFFFF", "#D2B48C"]
   },
   {
     id: 302,
@@ -177,6 +222,13 @@ export const PRODUCTS = [
     category: "Home & Living",
     price: "₱ 2,499",
     image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800",
+    description: "Transform your space with this stunning abstract wall art. Printed on high-quality archival paper with fade-resistant inks. Frame not included.",
+    rating: 5.0,
+    reviews: [
+      { user: "Anna K.", rating: 5, comment: "Looks beautiful in my living room." }
+    ],
+    sizes: ["A4", "A3", "A2"],
+    colors: []
   },
   {
     id: 303,
@@ -184,6 +236,11 @@ export const PRODUCTS = [
     category: "Home & Living",
     price: "₱ 1,899",
     image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800",
+    description: "Display your greenery in style with this eco-friendly bamboo plant stand. Sturdy, moisture-resistant, and easy to assemble.",
+    rating: 4.4,
+    reviews: [],
+    sizes: ["Standard"],
+    colors: ["#DEB887"]
   }
 ];
 
@@ -213,4 +270,102 @@ export const TEAM_MEMBERS = [
     role: "Product Manager",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
   },
+];
+
+export const SERVICE_HIGHLIGHTS = [
+  {
+    id: 1,
+    title: "Free Shipping",
+    description: "On all orders over $50",
+    iconName: "Truck"
+  },
+  {
+    id: 2,
+    title: "Secure Payment",
+    description: "100% secure checkout",
+    iconName: "ShieldCheck"
+  },
+  {
+    id: 3,
+    title: "24/7 Support",
+    description: "Dedicated support team",
+    iconName: "Headphones"
+  },
+  {
+    id: 4,
+    title: "Money Back",
+    description: "30-day guarantee",
+    iconName: "RefreshCcw"
+  }
+];
+
+export const SLIDER_DATA = [
+  {
+    id: 1,
+    subtitle: "New Arrival",
+    title: "The Minimalist Collection",
+    description: "Discover the beauty of less. Clean lines, premium materials, and timeless design.",
+    image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1600"
+  },
+  {
+    id: 2,
+    subtitle: "Season's Best",
+    title: "Urban Essentials",
+    description: "Curated pieces for the modern city dweller. Functional, stylish, and durable.",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=1600"
+  },
+  {
+    id: 3,
+    subtitle: "Limited Edition",
+    title: "Signature Series",
+    description: "Exclusive designs available in limited quantities. Make a statement.",
+    image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=1600"
+  }
+];
+
+export const USER_ORDERS = [
+  {
+    id: "ORD-7752",
+    date: "Feb 15, 2024",
+    status: "Delivered",
+    payment: "Paid",
+    total: "₱ 1,299",
+    items: [
+      { name: "Minimalist Ceramic Vase", qty: 1, image: "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&q=80&w=800" }
+    ],
+    progress: 4 // 0: Placed, 1: Processing, 2: Shipped, 3: Out for delivery, 4: Delivered
+  },
+  {
+    id: "ORD-9211",
+    date: "Feb 28, 2024",
+    status: "Processing",
+    payment: "Pending",
+    total: "₱ 4,198",
+    items: [
+      { name: "Cotton Classic T-Shirt", qty: 2, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800" },
+      { name: "Abstract Wall Art Print", qty: 1, image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800" }
+    ],
+    progress: 1
+  }
+];
+
+export const USER_ADDRESSES = [
+  {
+    id: 1,
+    type: "Home",
+    name: "Alex Doe",
+    details: "123 Maple Avenue, Apt 4B",
+    city: "Quezon City",
+    zip: "1100",
+    isDefault: true
+  },
+  {
+    id: 2,
+    type: "Office",
+    name: "Alex Doe",
+    details: "45 Business Park, Tower 2",
+    city: "Makati City",
+    zip: "1200",
+    isDefault: false
+  }
 ];

@@ -1,12 +1,12 @@
 import React from 'react'
-import BannerHome from '../components/BannerHome'
+import HeroSlider from '../components/HeroSlider'
 import CategorySection from '../components/CategorySection'
 import FeaturedProducts from '../components/FeaturedProducts'
 
 export const Home = () => {
   return (
     <div>
-      <BannerHome />
+      <HeroSlider />
       <CategorySection />
       <FeaturedProducts />
     </div>

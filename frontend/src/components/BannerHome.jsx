@@ -1,6 +1,7 @@
 import React from 'react';
 import { bannerHomeStyles } from '../assets/dummyStyles';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const BannerHome = () => {
     return (
@@ -15,10 +16,10 @@ export const BannerHome = () => {
                     Browse our curated collection of premium bags. Simple ordering, pay when approved.
                 </p>
 
-                <button className={bannerHomeStyles.button}>
+                <Link className={bannerHomeStyles.button} to="/products">
                     Shop Now
                     <ArrowRight className={bannerHomeStyles.buttonArrow} />
-                </button>
+                </Link>
             </div>
         </div>
     );

@@ -118,9 +118,9 @@ const Navbar = () => {
                                     <User size={20} />
                                 </Link>
                             ) : (
-                                <button onClick={handleLogout} className={`${minimalNavbarStyles.iconButton} hidden md:block`}>
+                                <Link to="/profile" className={`${minimalNavbarStyles.iconButton} hidden md:block`}>
                                     <User size={20} fill="currentColor" />
-                                </button>
+                                </Link>
                             )}
 
                             {/* MOBILE TOGGLE */}
@@ -180,12 +180,21 @@ const Navbar = () => {
                                     Login / Register
                                 </Link>
                             ) : (
-                                <button
-                                    onClick={handleLogout}
-                                    className={`${minimalNavbarStyles.mobileNavItem} text-left w-full`}
-                                >
-                                    Logout
-                                </button>
+                                <>
+                                    <Link
+                                        to="/profile"
+                                        className={minimalNavbarStyles.mobileNavItem}
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        My Account
+                                    </Link>
+                                    <button
+                                        onClick={handleLogout}
+                                        className={`${minimalNavbarStyles.mobileNavItem} text-left w-full text-red-500`}
+                                    >
+                                        Logout
+                                    </button>
+                                </>
                             )}
                         </div>
                     </div>

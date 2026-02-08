@@ -2,11 +2,11 @@ import React from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { featuredSectionStyles } from '../assets/dummyStyles';
 import { Link } from 'react-router-dom';
-import { WATCHES } from '../assets/dummywdata'; // Reusing existing data for now
+import { PRODUCTS } from '../assets/dummywdata';
 
 const FeaturedProducts = () => {
     // Show only first 4 products
-    const products = WATCHES.slice(0, 4);
+    const products = PRODUCTS.slice(0, 4);
 
     return (
         <section className={featuredSectionStyles.section}>
@@ -22,10 +22,10 @@ const FeaturedProducts = () => {
                 {/* Grid */}
                 <div className={featuredSectionStyles.grid}>
                     {products.map((product) => (
-                        <div key={product.id} className={featuredSectionStyles.card}>
+                        <Link to={`/product/${product.id}`} key={product.id} className={featuredSectionStyles.card}>
                             <div className={featuredSectionStyles.imageContainer}>
                                 <img
-                                    src={product.img}
+                                    src={product.image}
                                     alt={product.name}
                                     className={featuredSectionStyles.image}
                                 />
@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
                                 <h3 className={featuredSectionStyles.productName}>{product.name}</h3>
                                 <p className={featuredSectionStyles.price}>{product.price}</p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
