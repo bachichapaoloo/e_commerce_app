@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { heroSliderStyles } from '../assets/dummyStyles';
-import { SLIDER_DATA } from '../assets/dummywdata';
+import { heroSliderStyles } from '../../assets/dummyStyles';
+import { SLIDER_DATA } from '../../assets/dummywdata';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { shopPageStyles } from '../assets/dummyStyles';
-import ShopHero from '../components/ShopHero'; // Import ShopHero
+import ShopHero from '../components/sections/ShopHero'; // Import ShopHero
 import { Search, ChevronDown, Filter, Grid3x3, List } from 'lucide-react';
 import { PRODUCTS } from '../assets/dummywdata';
 import { Link } from 'react-router-dom';

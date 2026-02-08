@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { categorySectionStyles } from '../assets/dummyStyles';
+import { categorySectionStyles } from '../../assets/dummyStyles';
 import { Link } from 'react-router-dom';
 
 // Placeholder data since we don't have bag images yet

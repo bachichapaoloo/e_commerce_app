@@ -1,5 +1,5 @@
 import React from 'react';
-import { minimalFooterStyles } from '../assets/dummyStyles';
+import { minimalFooterStyles } from "../../assets/dummyStyles";
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

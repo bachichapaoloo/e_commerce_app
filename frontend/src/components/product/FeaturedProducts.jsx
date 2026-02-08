@@ -1,8 +1,8 @@
 import React from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
-import { featuredSectionStyles } from '../assets/dummyStyles';
+import { featuredSectionStyles } from '../../assets/dummyStyles';
 import { Link } from 'react-router-dom';
-import { PRODUCTS } from '../assets/dummywdata';
+import { PRODUCTS } from '../../assets/dummywdata';
 
 const FeaturedProducts = () => {
     // Show only first 4 products

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { carouselStyles } from '../assets/dummyStyles';
-import { SLIDER_DATA } from '../assets/dummywdata';
+import React, { useState, useEffect, useCallback } from 'react';
+import { carouselStyles } from '../../assets/dummyStyles';
+import { SLIDER_DATA } from '../../assets/dummywdata';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MinimalCarousel = () => {
     const [current, setCurrent] = useState(0);
     const length = SLIDER_DATA.length;
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrent(current === length - 1 ? 0 : current + 1);
-    };
+    }, [current, length]);
 
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1);
@@ -21,7 +21,7 @@ const MinimalCarousel = () => {
             nextSlide();
         }, 5000);
         return () => clearInterval(timer);
-    }, [current]);
+    }, [nextSlide]);
 
     if (!Array.isArray(SLIDER_DATA) || SLIDER_DATA.length <= 0) {
         return null;

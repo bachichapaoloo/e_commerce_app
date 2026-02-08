@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from '../CartContext';
+import { useCart } from '../context/CartContext';
 import { cartPageStyles } from '../assets/dummyStyles';
 import { Minus, Plus, Trash2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { bannerHomeStyles } from '../assets/dummyStyles';
+import { bannerHomeStyles } from '../../assets/dummyStyles';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

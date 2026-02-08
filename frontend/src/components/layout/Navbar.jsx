@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { minimalNavbarStyles } from "../assets/dummyStyles";
+import { minimalNavbarStyles } from "../../assets/dummyStyles";
 import { Clock, ShoppingBag, User, Menu, X, Search } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useCart } from "../CartContext";
+import { useCart } from "../../context/CartContext";
 
 const navItems = [
     { name: "Home", href: "/" },

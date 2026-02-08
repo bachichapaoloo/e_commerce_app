@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { profilePageStyles } from '../assets/dummyStyles';
 import { USER_ORDERS, USER_ADDRESSES } from '../assets/dummywdata';
-import { useCart } from '../CartContext';
+import { useCart } from '../context/CartContext';
 import {
     User, Package, MapPin, ShoppingBag, LogOut,
     CreditCard, ChevronRight, CheckCircle, Truck, Clock
@@ -78,8 +78,8 @@ const Profile = () => {
                         </div>
                         <div className="text-right">
                             <span className={`${profilePageStyles.orderStatus} ${order.status === 'Delivered' ? profilePageStyles.statusDelivered :
-                                    order.status === 'Processing' ? profilePageStyles.statusProcessing :
-                                        profilePageStyles.statusShipped
+                                order.status === 'Processing' ? profilePageStyles.statusProcessing :
+                                    profilePageStyles.statusShipped
                                 }`}>
                                 {order.status}
                             </span>

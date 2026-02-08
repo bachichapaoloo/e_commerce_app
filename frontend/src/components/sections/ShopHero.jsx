@@ -1,5 +1,5 @@
 import React from 'react';
-import { shopHeroStyles } from '../assets/dummyStyles';
+import { shopHeroStyles } from '../../assets/dummyStyles';
 
 const ShopHero = () => {
     return (

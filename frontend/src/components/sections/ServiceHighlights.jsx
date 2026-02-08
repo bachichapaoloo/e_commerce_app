@@ -1,7 +1,7 @@
 import React from 'react';
-import { serviceSectionStyles } from '../assets/dummyStyles';
+import { serviceSectionStyles } from '../../assets/dummyStyles';
 import { Truck, ShieldCheck, Headphones, RefreshCcw } from 'lucide-react';
-import { SERVICE_HIGHLIGHTS } from '../assets/dummywdata';
+import { SERVICE_HIGHLIGHTS } from '../../assets/dummywdata';
 
 const iconMap = {
     Truck: Truck,

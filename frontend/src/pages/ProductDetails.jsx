@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { PRODUCTS } from '../assets/dummywdata';
 import { productDetailsStyles } from '../assets/dummyStyles';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
-import { useCart } from '../CartContext';
+import { useCart } from '../context/CartContext';
 
 const ProductDetailsContent = () => {
     const { id } = useParams();

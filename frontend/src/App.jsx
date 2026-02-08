@@ -7,8 +7,8 @@ import ProductDetails from './pages/ProductDetails' // Import ProductDetails
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Profile from './pages/Profile';
-import Navbar from './components/Navbar'
-import FooterSection from './components/FooterSection'
+import Navbar from './components/layout/Navbar'
+import FooterSection from './components/layout/FooterSection'
 
 function App() {
   return (
